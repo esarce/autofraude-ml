@@ -1,60 +1,69 @@
-# 🤖 autofraude-ml
+# 🤖 Proyecto Capstone: Detección de Autofraude con Machine Learning
 
-Proyecto capstone de Machine Learning orientado a la detección de fraude. Este repositorio contiene el desarrollo completo del modelo, desde la exploración de datos hasta el despliegue.
-
----
-
-## 📚 Tabla de Contenidos  
-<!-- markdownlint-disable MD033 -->
-[TOC]
+Este repositorio contiene el desarrollo completo de un sistema de detección de fraude, enfocado especialmente en identificar casos de **autofraude**. El proyecto abarca desde la exploración inicial de los datos hasta el despliegue del modelo final.
 
 ---
 
-## 🚀 Objetivo del proyecto
+## 📚 Tabla de Contenidos
 
-Desarrollar un sistema capaz de detectar patrones de comportamiento asociados a fraude, utilizando modelos de machine learning entrenados con datos históricos de comportamiento de clientes.
+- [🤖 Proyecto Capstone: Detección de Autofraude con Machine Learning](#-proyecto-capstone-detección-de-autofraude-con-machine-learning)
+  - [📚 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [🚀 Objetivo del Proyecto](#-objetivo-del-proyecto)
+  - [🧱 Estructura de la Presentación (`presentacion-capstone/`)](#-estructura-de-la-presentación-presentacion-capstone)
+  - [🧱 Estructura del Proyecto (`ml-capstone-project/`)](#-estructura-del-proyecto-ml-capstone-project)
 
 ---
-## 🧱 Estructura de la presentación
+
+## 🚀 Objetivo del Proyecto
+
+Desarrollar un sistema capaz de detectar patrones de comportamiento asociados a **autofraude** en reclamos de fraude, utilizando técnicas de *machine learning* entrenadas con datos históricos de clientes.  
+
+El sistema incluye:
+- Identificación de patrones relevantes,
+- Optimización del punto de corte,
+- Maximización del beneficio esperado,
+- Aplicación de técnicas de procesamiento de lenguaje natural (NLP),
+- Modelos multivariables para segmentación y análisis de demanda potencial (*Customer Lifetime Value*).
+
+---
+
+## 🧱 Estructura de la Presentación (`presentacion-capstone/`)
 
 ```bash
 presentacion-capstone/
 │
-├── explicar el problema        # diferencia fraude vs autofraude, lamina 2 del ppt 3, impacto en la industria. @esteban
-├── objetivos/                  # 
-│   ├── obj1/                   # objetivo original de detección de autofraude, (obj.2 - presentación final) 
-│                               # ------                               
-│                               # Predecir transacciones de auto-fraude en reclamos de fraude mediante un modelo de 
-│                               # machine learning, complementado con la identificación de patrones de comportamiento
-│                               # relevantes y la optimización del punto de corte, con el fin de reducir los casos no 
-│                               # detectados y maximizar el beneficio esperado.
-│   ├── obj2/                   # Agregar lo q planteamos de NLP -> transformarlo en un objetivo [80%-90%] -> @jaime
-│   └── obj3/                   # Modelo multivariable | Segmentación | CLV y decidir demanda o no? (monto$) -> 2da capa
-├── alcances/                   # lamina 24 (oculta en canvas) - trabajar en lamina de alcances del proyecto @ulises 
-├── metodologia/                # consolidar lamina 8 ppt 3, con lamina 4. @ulises + @esteban
-├── revision-bibliografica/     # (stand-by)
-├── desarrollo-metodologico/    # 
-│   ├── eda/                    # @esteban
-│   ├── ingenieria-atributos/   # @jaime
-│   ├── analisis-sens-costos/   # lamina 14 p3, automatizar @ulises
+├── explicar-el-problema/       # Diferencia entre fraude y autofraude, impacto en la industria
+├── objetivos/                  
+│   ├── obj1/                   # Objetivo original: detección de autofraude
+│   ├── obj2/                   # Incorporación de NLP como objetivo adicional
+│   └── obj3/                   # Modelo multivariable: segmentación, CLV y evaluación de demanda
+├── alcances/                   # Límites del proyecto, decisiones tomadas
+├── metodologia/                # Descripción de la metodología utilizada
+├── revision-bibliografica/    # Revisión teórica y antecedentes (en progreso)
+├── desarrollo-metodologico/
+│   ├── eda/                    # Análisis exploratorio de datos
+│   ├── ingenieria-atributos/   # Creación y selección de variables
+│   └── analisis-sens-costos/   # Análisis de sensibilidad y costos
+```
 
 ---
-## 🧱 Estructura del proyecto
+
+## 🧱 Estructura del Proyecto (`ml-capstone-project/`)
 
 ```bash
 ml-capstone-project/
 │
 ├── README.md                   # Descripción general del proyecto
-├── requirements.txt            # Lista de dependencias (pip)
-├── environment.yml             # Alternativa de entorno con Conda
-├── .gitignore                  # Archivos/carpetas excluidos del control de versiones
+├── requirements.txt            # Dependencias del entorno (pip)
+├── environment.yml             # Configuración alternativa con Conda
+├── .gitignore                  # Archivos excluidos del control de versiones
 │
-├── data/                       # Datos utilizados en el proyecto
+├── data/                       # Datos del proyecto
 │   ├── raw/                    # Datos originales sin procesar
-│   ├── processed/              # Datos limpios y listos para modelar
-│   └── external/               # Datos de fuentes externas
+│   ├── processed/              # Datos transformados y listos para modelar
+│   └── external/               # Datos externos complementarios
 │
-├── notebooks/                  # Notebooks Jupyter para exploración y modelado
+├── notebooks/                  # Notebooks para análisis y desarrollo
 │   ├── 01_EDA.ipynb
 │   ├── 02_FeatureEngineering.ipynb
 │   └── 03_ModelTraining.ipynb
@@ -69,14 +78,15 @@ ml-capstone-project/
 ├── models/                     # Modelos entrenados y serializados
 │   └── final_model.pkl
 │
-├── outputs/                    # Resultados, gráficos y métricas
+├── outputs/                    # Resultados y visualizaciones
 │   ├── figures/
 │   └── metrics/
 │
-├── app/                        # (Opcional) Código de despliegue
+├── app/                        # Código de despliegue del modelo (opcional)
 │   ├── main.py
 │   └── model_utils.py
 │
 └── reports/                    # Informes y presentaciones
     ├── capstone_report.pdf
     └── slides.pptx
+```
